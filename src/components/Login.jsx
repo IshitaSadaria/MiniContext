@@ -1,12 +1,12 @@
 import React, { useContext, useState, userContext } from "react";
 import UserContext from "../context/UserContext";
 
-const login = () => {
+const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const {setUser} = useContext(UserContext);
   const handleSubmit = (e) => {
-    e.prevent.default()
+    e.preventDefault()
     setUser({username, password});
   };
 
@@ -30,7 +30,7 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;
 
 
 //Notes
